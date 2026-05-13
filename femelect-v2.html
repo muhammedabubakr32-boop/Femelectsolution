@@ -1,0 +1,1125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Femelect Solution – Excellent Solution Provider</title>
+<style>
+  /* System font stack - no external dependencies */
+  :root {
+    --font-display: 'Georgia', 'Times New Roman', serif;
+    --font-body: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+  }
+</style>
+<style>
+:root {
+  --green: #0d6e3f;
+  --green-light: #16a85f;
+  --green-pale: #e8f5ee;
+  --green-dark: #064028;
+  --yellow: #f5c518;
+  --yellow-warm: #ffb703;
+  --yellow-pale: #fffbea;
+  --dark: #0a1a0f;
+  --white: #fafcfa;
+  --text: #1a2e1f;
+  --text-muted: #5a7565;
+  --border: #d4e8da;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+  background: var(--white);
+  color: var(--text);
+  overflow-x: hidden;
+}
+
+/* ── NAV ── */
+nav {
+  position: fixed; top: 0; width: 100%; z-index: 200;
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 16px 6%;
+  background: rgba(250,252,250,0.95);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border);
+}
+.logo {
+  font-family: 'Georgia', 'Trebuchet MS', sans-serif; font-weight: 800;
+  font-size: 1.5rem; font-weight: 800;
+  color: var(--green-dark);
+  letter-spacing: -0.5px;
+}
+.logo span { color: var(--yellow-warm); }
+.nav-links { display: flex; gap: 28px; list-style: none; align-items: center; }
+.nav-links a {
+  color: var(--text-muted); text-decoration: none;
+  font-size: 0.9rem; font-weight: 500;
+  transition: color 0.2s;
+}
+.nav-links a:hover { color: var(--green); }
+.nav-cta {
+  background: var(--green) !important;
+  color: white !important;
+  padding: 10px 24px;
+  border-radius: 50px;
+  font-weight: 600 !important;
+  transition: background 0.2s, transform 0.2s !important;
+}
+.nav-cta:hover { background: var(--green-light) !important; transform: translateY(-1px); }
+
+/* ── HERO ── */
+.hero {
+  min-height: 100vh;
+  display: grid; grid-template-columns: 1fr 1fr;
+  align-items: center;
+  padding: 100px 6% 60px;
+  background: linear-gradient(160deg, #f0faf4 0%, #fff9e6 100%);
+  position: relative; overflow: hidden;
+  gap: 60px;
+}
+.hero::before {
+  content: '';
+  position: absolute; top: -100px; right: -100px;
+  width: 600px; height: 600px;
+  background: radial-gradient(circle, rgba(245,197,24,0.12) 0%, transparent 70%);
+  border-radius: 50%;
+}
+.hero-badge {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: var(--green-pale);
+  border: 1px solid rgba(13,110,63,0.2);
+  color: var(--green);
+  font-size: 0.78rem; font-weight: 600;
+  letter-spacing: 1px; text-transform: uppercase;
+  padding: 7px 16px; border-radius: 50px;
+  margin-bottom: 24px;
+  animation: fadeUp 0.5s ease both;
+}
+.hero-badge::before { content: '🌿'; }
+h1 {
+  font-family: 'Georgia', 'Trebuchet MS', sans-serif; font-weight: 800;
+  font-size: clamp(2.6rem, 5vw, 4rem);
+  font-weight: 800; line-height: 1.1;
+  letter-spacing: -1px;
+  margin-bottom: 20px;
+  animation: fadeUp 0.5s 0.1s ease both;
+  color: var(--green-dark);
+}
+h1 em { color: var(--green); font-style: normal; }
+h1 strong { color: var(--yellow-warm); font-style: normal; }
+.hero-sub {
+  font-size: 1.05rem; font-weight: 300;
+  color: var(--text-muted); line-height: 1.75;
+  max-width: 460px; margin-bottom: 36px;
+  animation: fadeUp 0.5s 0.2s ease both;
+}
+.hero-btns {
+  display: flex; gap: 14px; flex-wrap: wrap;
+  animation: fadeUp 0.5s 0.3s ease both;
+}
+.btn-green {
+  background: var(--green); color: white;
+  padding: 14px 32px; border-radius: 50px;
+  font-weight: 600; font-size: 0.95rem;
+  text-decoration: none;
+  transition: transform 0.2s, box-shadow 0.2s;
+  box-shadow: 0 4px 20px rgba(13,110,63,0.25);
+}
+.btn-green:hover { transform: translateY(-2px); box-shadow: 0 8px 32px rgba(13,110,63,0.35); }
+.btn-outline {
+  border: 2px solid var(--green);
+  color: var(--green); background: transparent;
+  padding: 13px 30px; border-radius: 50px;
+  font-weight: 600; font-size: 0.95rem;
+  text-decoration: none;
+  transition: background 0.2s, color 0.2s;
+}
+.btn-outline:hover { background: var(--green); color: white; }
+
+.hero-image {
+  position: relative;
+  animation: fadeUp 0.6s 0.2s ease both;
+}
+.hero-image img {
+  width: 100%; border-radius: 20px;
+  box-shadow: 0 30px 80px rgba(13,110,63,0.15);
+}
+.hero-floating-card {
+  position: absolute; bottom: -20px; left: -20px;
+  background: white; border-radius: 16px;
+  padding: 16px 20px;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+  display: flex; align-items: center; gap: 12px;
+  min-width: 200px;
+}
+.float-icon { font-size: 2rem; }
+.float-text { font-size: 0.78rem; color: var(--text-muted); }
+.float-text strong { display: block; font-size: 1rem; color: var(--green-dark); font-weight: 700; }
+
+.hero-trust {
+  display: flex; gap: 32px; margin-top: 48px;
+  animation: fadeUp 0.5s 0.4s ease both;
+}
+.trust-item { text-align: center; }
+.trust-num {
+  font-family: 'Georgia', 'Trebuchet MS', sans-serif; font-weight: 800;
+  font-size: 1.8rem; font-weight: 800;
+  color: var(--green); line-height: 1;
+}
+.trust-label { font-size: 0.75rem; color: var(--text-muted); margin-top: 4px; }
+
+/* ── SECTION BASE ── */
+.section { padding: 90px 6%; }
+.section-tag {
+  display: inline-block;
+  background: var(--green-pale);
+  color: var(--green);
+  font-size: 0.72rem; font-weight: 700;
+  letter-spacing: 1.5px; text-transform: uppercase;
+  padding: 6px 14px; border-radius: 50px;
+  margin-bottom: 16px;
+}
+.section-title {
+  font-family: 'Georgia', 'Trebuchet MS', sans-serif; font-weight: 800;
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  font-weight: 800; line-height: 1.15;
+  letter-spacing: -0.5px;
+  color: var(--green-dark);
+  margin-bottom: 14px;
+}
+.section-sub {
+  font-size: 1rem; color: var(--text-muted);
+  line-height: 1.75; max-width: 520px;
+}
+
+/* ── HOW IT WORKS ── */
+.how { background: var(--white); }
+.how-header { text-align: center; margin-bottom: 64px; }
+.how-header .section-sub { margin: 0 auto; }
+
+.how-diagram {
+  background: linear-gradient(135deg, #f0faf4, #fffbea);
+  border-radius: 24px;
+  padding: 60px 40px;
+  border: 1px solid var(--border);
+  position: relative;
+  overflow: hidden;
+}
+.how-diagram::before {
+  content: '';
+  position: absolute; top: 0; left: 0; right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--green), var(--yellow-warm));
+}
+
+/* Flow steps */
+.flow {
+  display: flex; align-items: flex-start;
+  justify-content: center; gap: 0;
+  flex-wrap: nowrap;
+  margin-bottom: 50px;
+}
+.flow-step {
+  display: flex; flex-direction: column; align-items: center;
+  text-align: center; flex: 1; max-width: 180px;
+  position: relative;
+}
+.flow-step:not(:last-child)::after {
+  content: '';
+  position: absolute; top: 36px; left: calc(50% + 36px);
+  width: calc(100% - 36px);
+  height: 2px;
+  background: linear-gradient(90deg, var(--yellow-warm), var(--green-light));
+  z-index: 0;
+}
+.flow-icon-wrap {
+  width: 72px; height: 72px;
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.8rem;
+  position: relative; z-index: 1;
+  margin-bottom: 16px;
+  box-shadow: 0 6px 24px rgba(0,0,0,0.08);
+}
+.step-sun .flow-icon-wrap { background: #fff9e6; border: 2px solid var(--yellow-warm); }
+.step-panel .flow-icon-wrap { background: #e8f5ee; border: 2px solid var(--green-light); }
+.step-inverter .flow-icon-wrap { background: #fff0f0; border: 2px solid #e05c5c; }
+.step-battery .flow-icon-wrap { background: #f0f4ff; border: 2px solid #5c7ae0; }
+.step-home .flow-icon-wrap { background: #f5f0ff; border: 2px solid #9b5ce0; }
+
+.flow-step h4 {
+  font-family: 'Georgia', 'Trebuchet MS', sans-serif; font-weight: 800;
+  font-size: 0.88rem; font-weight: 700;
+  color: var(--green-dark); margin-bottom: 6px;
+}
+.flow-step p { font-size: 0.75rem; color: var(--text-muted); line-height: 1.5; }
+
+/* House diagram */
+.house-diagram {
+  background: white;
+  border-radius: 16px;
+  border: 1px solid var(--border);
+  padding: 40px;
+  position: relative;
+  overflow: hidden;
+}
+.house-diagram-inner {
+  display: grid; grid-template-columns: 1fr 280px;
+  gap: 40px; align-items: center;
+}
+.house-svg-wrap { position: relative; }
+.house-svg {
+  width: 100%;
+  max-width: 420px;
+}
+/* SVG house illustration */
+.diagram-labels { display: flex; flex-direction: column; gap: 20px; }
+.diag-label {
+  display: flex; align-items: flex-start; gap: 14px;
+  padding: 16px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background: var(--green-pale);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.diag-label:hover { transform: translateX(4px); box-shadow: 0 4px 16px rgba(13,110,63,0.1); }
+.diag-num {
+  width: 32px; height: 32px; border-radius: 50%;
+  background: var(--green); color: white;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 0.82rem; font-weight: 700; flex-shrink: 0;
+}
+.diag-label h5 { font-size: 0.88rem; font-weight: 700; color: var(--green-dark); margin-bottom: 3px; }
+.diag-label p { font-size: 0.78rem; color: var(--text-muted); line-height: 1.5; }
+
+/* ── SERVICES ── */
+.services { background: var(--green-dark); }
+.services .section-title { color: white; }
+.services .section-tag { background: rgba(245,197,24,0.15); color: var(--yellow); }
+.services .section-sub { color: rgba(255,255,255,0.6); }
+.services-header { margin-bottom: 56px; }
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+.svc-card {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 16px; padding: 32px 28px;
+  transition: background 0.3s, transform 0.3s, border-color 0.3s;
+  cursor: default;
+}
+.svc-card:hover {
+  background: rgba(255,255,255,0.09);
+  border-color: rgba(245,197,24,0.3);
+  transform: translateY(-4px);
+}
+.svc-emoji { font-size: 2.2rem; margin-bottom: 18px; display: block; }
+.svc-card h3 {
+  font-family: 'Georgia', 'Trebuchet MS', sans-serif; font-weight: 800;
+  font-size: 1.1rem; font-weight: 700;
+  color: white; margin-bottom: 10px;
+}
+.svc-card p { font-size: 0.85rem; color: rgba(255,255,255,0.55); line-height: 1.7; }
+.svc-tag {
+  display: inline-block; margin-top: 16px;
+  background: rgba(245,197,24,0.12);
+  color: var(--yellow); font-size: 0.7rem;
+  font-weight: 600; letter-spacing: 0.5px;
+  padding: 4px 10px; border-radius: 50px;
+}
+
+/* ── WHAT WE POWER ── */
+.power { background: var(--white); }
+.power-header { text-align: center; margin-bottom: 56px; }
+.power-header .section-sub { margin: 0 auto; }
+.appliance-grid {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;
+}
+.appliance-group {
+  border-radius: 20px; overflow: hidden;
+  border: 1px solid var(--border);
+}
+.appliance-group-header {
+  padding: 20px 24px;
+  display: flex; align-items: center; gap: 12px;
+}
+.heavy .appliance-group-header { background: #fff3f0; }
+.medium .appliance-group-header { background: #fffbea; }
+.light .appliance-group-header { background: #f0faf4; }
+.group-icon { font-size: 1.6rem; }
+.group-title { font-family: 'Georgia', 'Trebuchet MS', sans-serif; font-weight: 800; font-weight: 700; font-size: 0.95rem; }
+.heavy .group-title { color: #c0392b; }
+.medium .group-title { color: #d68910; }
+.light .group-title { color: var(--green); }
+.group-sub { font-size: 0.72rem; color: var(--text-muted); }
+.appliance-list { padding: 16px 24px 24px; display: flex; flex-direction: column; gap: 10px; }
+.appliance-item {
+  display: flex; align-items: center; gap: 10px;
+  font-size: 0.85rem; color: var(--text);
+  padding: 8px 12px;
+  background: var(--green-pale);
+  border-radius: 8px;
+}
+.heavy .appliance-item { background: #fff3f0; }
+.medium .appliance-item { background: #fffbea; }
+.appliance-item span { font-size: 1.1rem; }
+
+/* ── INSTALLATION STEPS ── */
+.install { background: linear-gradient(160deg, #f0faf4 0%, white 100%); }
+.install-header { margin-bottom: 56px; }
+.install-steps { display: flex; flex-direction: column; gap: 0; }
+.install-step {
+  display: grid; grid-template-columns: 80px 1fr 1fr;
+  gap: 40px; align-items: center;
+  padding: 40px 0;
+  border-bottom: 1px solid var(--border);
+  position: relative;
+}
+.install-step:last-child { border-bottom: none; }
+.step-num-big {
+  font-family: 'Georgia', 'Trebuchet MS', sans-serif; font-weight: 800;
+  font-size: 4rem; font-weight: 800;
+  color: var(--green-pale);
+  line-height: 1;
+  user-select: none;
+}
+.step-content h3 {
+  font-family: 'Georgia', 'Trebuchet MS', sans-serif; font-weight: 800;
+  font-size: 1.3rem; font-weight: 700;
+  color: var(--green-dark); margin-bottom: 10px;
+}
+.step-content p { font-size: 0.9rem; color: var(--text-muted); line-height: 1.75; }
+.step-img {
+  width: 100%; height: 200px;
+  object-fit: cover; border-radius: 14px;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+}
+.step-visual-placeholder {
+  width: 100%; height: 200px;
+  border-radius: 14px;
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: center;
+  font-size: 3rem; gap: 8px;
+}
+.sv1 { background: linear-gradient(135deg, #e8f5ee, #d0ecdc); }
+.sv2 { background: linear-gradient(135deg, #fff9e6, #ffe8a0); }
+.sv3 { background: linear-gradient(135deg, #f0f4ff, #d8e2ff); }
+.sv-label { font-size: 0.78rem; color: var(--text-muted); font-weight: 500; }
+
+/* ── WHY FEMELECT ── */
+.why { background: var(--white); }
+.why-inner {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center;
+}
+.why-visual {
+  background: linear-gradient(145deg, var(--green-dark), var(--green));
+  border-radius: 24px; padding: 50px 40px;
+  min-height: 400px; position: relative; overflow: hidden;
+  display: flex; flex-direction: column; justify-content: flex-end;
+}
+.why-visual::before {
+  content: '⚡';
+  position: absolute; top: 20px; right: 20px;
+  font-size: 8rem; opacity: 0.06;
+}
+.why-visual-quote {
+  font-family: 'Georgia', 'Trebuchet MS', sans-serif; font-weight: 800;
+  font-size: 1.8rem; font-weight: 800;
+  color: white; line-height: 1.2;
+  margin-bottom: 20px;
+}
+.why-visual-quote em { color: var(--yellow); font-style: normal; }
+.why-visual-sub { font-size: 0.85rem; color: rgba(255,255,255,0.6); line-height: 1.6; }
+
+.why-points { display: flex; flex-direction: column; gap: 28px; }
+.why-point { display: flex; gap: 18px; align-items: flex-start; }
+.why-point-icon {
+  width: 48px; height: 48px; border-radius: 12px;
+  background: var(--green-pale);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.3rem; flex-shrink: 0;
+}
+.why-point h4 {
+  font-family: 'Georgia', 'Trebuchet MS', sans-serif; font-weight: 800;
+  font-weight: 700; font-size: 1rem;
+  color: var(--green-dark); margin-bottom: 5px;
+}
+.why-point p { font-size: 0.85rem; color: var(--text-muted); line-height: 1.65; }
+
+/* ── ABOUT ── */
+.about { background: var(--green-pale); }
+.about-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 70px; align-items: center; }
+.about-text .section-title { margin-bottom: 20px; }
+.about-text p { font-size: 0.95rem; color: var(--text-muted); line-height: 1.8; margin-bottom: 20px; }
+.values-wrap { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 32px; }
+.val-chip {
+  background: white; border-radius: 12px;
+  padding: 14px 16px;
+  border: 1px solid var(--border);
+  display: flex; align-items: center; gap: 10px;
+}
+.val-chip-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--green); flex-shrink: 0; }
+.val-chip span { font-size: 0.82rem; font-weight: 600; color: var(--green-dark); }
+.about-visual-grid {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 12px;
+}
+.about-img-card {
+  border-radius: 14px; overflow: hidden;
+  aspect-ratio: 1;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 3rem;
+}
+.ai1 { background: linear-gradient(135deg, #e8f5ee, #c8e8d8); }
+.ai2 { background: linear-gradient(135deg, #fffbea, #ffe8a0); grid-row: span 2; border-radius: 14px; aspect-ratio: auto; min-height: 250px; }
+.ai3 { background: linear-gradient(135deg, #f0f4ff, #d8e2ff); }
+
+/* ── CONTACT ── */
+.contact {
+  background: var(--green-dark);
+  padding: 90px 6%;
+  position: relative; overflow: hidden;
+}
+.contact::before {
+  content: '';
+  position: absolute; top: -200px; right: -200px;
+  width: 500px; height: 500px;
+  background: radial-gradient(circle, rgba(245,197,24,0.08) 0%, transparent 70%);
+}
+.contact-inner {
+  max-width: 800px; margin: 0 auto;
+  display: grid; grid-template-columns: 1fr 1fr; gap: 60px;
+  align-items: center;
+}
+.contact-left .section-title { color: white; font-size: 2.2rem; }
+.contact-left .section-tag { background: rgba(245,197,24,0.15); color: var(--yellow); }
+.contact-left p { color: rgba(255,255,255,0.6); font-size: 0.9rem; line-height: 1.75; margin-top: 14px; }
+.contact-card-list { display: flex; flex-direction: column; gap: 14px; }
+.c-card {
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 14px; padding: 20px 22px;
+  display: flex; align-items: center; gap: 16px;
+  transition: background 0.2s;
+  text-decoration: none;
+}
+.c-card:hover { background: rgba(255,255,255,0.1); }
+.c-card-icon {
+  width: 44px; height: 44px; border-radius: 10px;
+  background: rgba(255,255,255,0.08);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.2rem; flex-shrink: 0;
+}
+.c-card-label { font-size: 0.72rem; color: rgba(255,255,255,0.45); text-transform: uppercase; letter-spacing: 0.5px; }
+.c-card-val { font-weight: 600; color: white; font-size: 0.95rem; margin-top: 2px; }
+.whatsapp-cta {
+  display: flex; align-items: center; justify-content: center; gap: 10px;
+  background: #25D366; color: white;
+  padding: 16px 28px; border-radius: 50px;
+  font-weight: 700; font-size: 1rem;
+  text-decoration: none;
+  box-shadow: 0 4px 24px rgba(37,211,102,0.3);
+  transition: transform 0.2s, box-shadow 0.2s;
+  margin-top: 6px;
+}
+.whatsapp-cta:hover { transform: translateY(-2px); box-shadow: 0 8px 32px rgba(37,211,102,0.4); }
+
+/* ── FOOTER ── */
+footer {
+  background: #050f07;
+  padding: 28px 6%;
+  display: flex; align-items: center; justify-content: space-between;
+  flex-wrap: wrap; gap: 12px;
+  border-top: 1px solid rgba(255,255,255,0.06);
+}
+.footer-logo { font-family: 'Georgia', 'Trebuchet MS', sans-serif; font-weight: 800; font-size: 1.2rem; font-weight: 800; color: white; }
+.footer-logo span { color: var(--yellow-warm); }
+footer p { font-size: 0.78rem; color: rgba(255,255,255,0.3); }
+
+/* ── ANIMATIONS ── */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(28px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 900px) {
+  .hero { grid-template-columns: 1fr; padding-top: 90px; }
+  .hero-image { display: none; }
+  .about-inner, .why-inner, .contact-inner { grid-template-columns: 1fr; gap: 40px; }
+  .services-grid { grid-template-columns: 1fr 1fr; }
+  .appliance-grid { grid-template-columns: 1fr; }
+  .install-step { grid-template-columns: 60px 1fr; }
+  .step-img, .step-visual-placeholder { display: none; }
+  .nav-links { display: none; }
+  footer { flex-direction: column; text-align: center; }
+  .flow { flex-wrap: wrap; gap: 24px; }
+  .flow-step:not(:last-child)::after { display: none; }
+  .house-diagram-inner { grid-template-columns: 1fr; }
+}
+@media (max-width: 600px) {
+  .services-grid { grid-template-columns: 1fr; }
+  .values-wrap { grid-template-columns: 1fr; }
+  .about-visual-grid { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="logo">FEM<span>ELECT</span> SOLUTION</div>
+  <ul class="nav-links">
+    <li><a href="#how">How It Works</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#install">Installation</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#contact" class="nav-cta">Get a Quote</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-content">
+    <div class="hero-badge">Excellent Solution Provider</div>
+    <h1>Power Your Home &amp; Business With <em>Clean</em> <strong>Solar Energy</strong></h1>
+    <p class="hero-sub">Femelect Solution designs and installs hybrid solar, inverter, and power systems built for Nigerian homes and businesses — engineered right, priced competitively.</p>
+    <div class="hero-btns">
+      <a href="#contact" class="btn-green">Get a Free Quote</a>
+      <a href="#how" class="btn-outline">How It Works</a>
+    </div>
+    <div class="hero-trust">
+      <div class="trust-item">
+        <div class="trust-num">100%</div>
+        <div class="trust-label">Quality Assured</div>
+      </div>
+      <div class="trust-item">
+        <div class="trust-num">24/7</div>
+        <div class="trust-label">Support</div>
+      </div>
+      <div class="trust-item">
+        <div class="trust-num">✓</div>
+        <div class="trust-label">Eng. Standards</div>
+      </div>
+    </div>
+  </div>
+  <div class="hero-image">
+    <div style="width:100%;border-radius:20px;box-shadow:0 30px 80px rgba(13,110,63,0.15);background:linear-gradient(135deg,#0a2e1a 0%,#1b5e35 50%,#2d8a55 100%);min-height:380px;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;">
+      <!-- Animated sun -->
+      <div style="position:absolute;top:30px;right:40px;width:80px;height:80px;background:radial-gradient(circle,#FFD700,#ffb703);border-radius:50%;box-shadow:0 0 40px rgba(255,215,0,0.5);"></div>
+      <!-- Solar panels SVG -->
+      <svg width="320" height="220" viewBox="0 0 320 220" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <!-- Roof -->
+        <polygon points="20,130 160,40 300,130" fill="#1b4332" stroke="#0a2e1a" stroke-width="2"/>
+        <!-- Panels -->
+        <g transform="translate(80,72) rotate(-18)">
+          <rect width="70" height="48" rx="3" fill="#1a3a6e" stroke="#0d2a54" stroke-width="1.5"/>
+          <line x1="0" y1="16" x2="70" y2="16" stroke="#2563a8" stroke-width="1"/>
+          <line x1="0" y1="32" x2="70" y2="32" stroke="#2563a8" stroke-width="1"/>
+          <line x1="23" y1="0" x2="23" y2="48" stroke="#2563a8" stroke-width="1"/>
+          <line x1="47" y1="0" x2="47" y2="48" stroke="#2563a8" stroke-width="1"/>
+          <!-- Shine -->
+          <rect x="4" y="4" width="14" height="8" rx="2" fill="white" opacity="0.15"/>
+        </g>
+        <g transform="translate(150,58) rotate(-18)">
+          <rect width="70" height="48" rx="3" fill="#1a3a6e" stroke="#0d2a54" stroke-width="1.5"/>
+          <line x1="0" y1="16" x2="70" y2="16" stroke="#2563a8" stroke-width="1"/>
+          <line x1="0" y1="32" x2="70" y2="32" stroke="#2563a8" stroke-width="1"/>
+          <line x1="23" y1="0" x2="23" y2="48" stroke="#2563a8" stroke-width="1"/>
+          <line x1="47" y1="0" x2="47" y2="48" stroke="#2563a8" stroke-width="1"/>
+          <rect x="4" y="4" width="14" height="8" rx="2" fill="white" opacity="0.15"/>
+        </g>
+        <!-- House body -->
+        <rect x="60" y="130" width="200" height="80" fill="white" stroke="#d4e8da" stroke-width="1.5"/>
+        <!-- Door -->
+        <rect x="140" y="165" width="40" height="45" rx="3" fill="#0d6e3f"/>
+        <circle cx="173" cy="189" r="3" fill="#f5c518"/>
+        <!-- Windows -->
+        <rect x="75" y="148" width="35" height="28" rx="3" fill="#bfdbfe" stroke="#93c5fd" stroke-width="1"/>
+        <line x1="92" y1="148" x2="92" y2="176" stroke="#93c5fd" stroke-width="1"/>
+        <line x1="75" y1="162" x2="110" y2="162" stroke="#93c5fd" stroke-width="1"/>
+        <rect x="210" y="148" width="35" height="28" rx="3" fill="#bfdbfe" stroke="#93c5fd" stroke-width="1"/>
+        <line x1="227" y1="148" x2="227" y2="176" stroke="#93c5fd" stroke-width="1"/>
+        <line x1="210" y1="162" x2="245" y2="162" stroke="#93c5fd" stroke-width="1"/>
+        <!-- Ground -->
+        <rect x="0" y="208" width="320" height="12" rx="4" fill="#0a2e1a" opacity="0.5"/>
+        <!-- Wires -->
+        <path d="M 165 118 L 165 148 L 240 148 L 240 165" stroke="#f5c518" stroke-width="2" stroke-dasharray="5 3" fill="none"/>
+        <!-- Inverter -->
+        <rect x="228" y="165" width="26" height="20" rx="4" fill="#0d6e3f"/>
+        <text x="241" y="178" font-size="6" fill="white" text-anchor="middle" font-family="sans-serif" font-weight="bold">INV</text>
+        <!-- Battery -->
+        <rect x="228" y="190" width="26" height="16" rx="4" fill="#1d4ed8"/>
+        <text x="241" y="201" font-size="5.5" fill="white" text-anchor="middle" font-family="sans-serif" font-weight="bold">BATT</text>
+        <!-- Sun rays -->
+        <line x1="270" y1="25" x2="210" y2="75" stroke="#FFD700" stroke-width="1.5" stroke-dasharray="4 3" opacity="0.7"/>
+        <line x1="275" y1="35" x2="230" y2="78" stroke="#FFD700" stroke-width="1" stroke-dasharray="4 3" opacity="0.5"/>
+      </svg>
+      <!-- Labels -->
+      <div style="position:absolute;top:16px;left:16px;background:rgba(13,110,63,0.85);color:white;font-size:0.75rem;font-weight:600;padding:6px 12px;border-radius:50px;backdrop-filter:blur(4px);">☀️ Solar Energy System</div>
+    </div>
+    <div class="hero-floating-card">
+      <div class="float-icon">☀️</div>
+      <div class="float-text">
+        <strong>Solar Powered</strong>
+        Clean & Renewable Energy
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="how section" id="how">
+  <div class="how-header">
+    <div class="section-tag">Education</div>
+    <div class="section-title">How Solar Energy Works</div>
+    <p class="section-sub">Understanding your solar system is the first step. Here's how sunlight becomes electricity that powers your home or business.</p>
+  </div>
+
+  <!-- Flow diagram -->
+  <div class="how-diagram">
+    <div class="flow">
+      <div class="flow-step step-sun">
+        <div class="flow-icon-wrap">☀️</div>
+        <h4>Sunlight</h4>
+        <p>The sun radiates free energy every day — your system captures it.</p>
+      </div>
+      <div class="flow-step step-panel">
+        <div class="flow-icon-wrap">🔲</div>
+        <h4>Solar Panels</h4>
+        <p>Panels mounted on your roof convert sunlight into DC electricity.</p>
+      </div>
+      <div class="flow-step step-inverter">
+        <div class="flow-icon-wrap">⚡</div>
+        <h4>Inverter</h4>
+        <p>The inverter converts DC to AC electricity your appliances can use.</p>
+      </div>
+      <div class="flow-step step-battery">
+        <div class="flow-icon-wrap">🔋</div>
+        <h4>Battery Storage</h4>
+        <p>Excess power is stored in batteries to power you at night or during outages.</p>
+      </div>
+      <div class="flow-step step-home">
+        <div class="flow-icon-wrap">🏠</div>
+        <h4>Your Home</h4>
+        <p>Clean electricity flows to your lights, appliances, and devices.</p>
+      </div>
+    </div>
+
+    <!-- House diagram (SVG-based) -->
+    <div class="house-diagram">
+      <div class="house-diagram-inner">
+        <div class="house-svg-wrap">
+          <svg class="house-svg" viewBox="0 0 420 320" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <!-- Sky background -->
+            <rect width="420" height="320" rx="12" fill="#f0faf4"/>
+            <!-- Sun -->
+            <circle cx="60" cy="55" r="30" fill="#FFD700" opacity="0.9"/>
+            <line x1="60" y1="15" x2="60" y2="5" stroke="#FFD700" stroke-width="3" stroke-linecap="round"/>
+            <line x1="60" y1="95" x2="60" y2="105" stroke="#FFD700" stroke-width="3" stroke-linecap="round"/>
+            <line x1="20" y1="55" x2="10" y2="55" stroke="#FFD700" stroke-width="3" stroke-linecap="round"/>
+            <line x1="100" y1="55" x2="110" y2="55" stroke="#FFD700" stroke-width="3" stroke-linecap="round"/>
+            <line x1="32" y1="27" x2="25" y2="20" stroke="#FFD700" stroke-width="3" stroke-linecap="round"/>
+            <line x1="88" y1="83" x2="95" y2="90" stroke="#FFD700" stroke-width="3" stroke-linecap="round"/>
+            <line x1="88" y1="27" x2="95" y2="20" stroke="#FFD700" stroke-width="3" stroke-linecap="round"/>
+            <!-- Sun rays to panel -->
+            <line x1="90" y1="70" x2="175" y2="118" stroke="#FFD700" stroke-width="1.5" stroke-dasharray="5 4" opacity="0.6"/>
+
+            <!-- House body -->
+            <rect x="80" y="160" width="260" height="140" rx="4" fill="white" stroke="#d4e8da" stroke-width="1.5"/>
+            <!-- Roof -->
+            <polygon points="70,165 210,90 350,165" fill="#2d6a4f" opacity="0.9"/>
+            <polygon points="70,165 210,90 350,165" fill="none" stroke="#1b4332" stroke-width="1.5"/>
+
+            <!-- Solar panels on roof -->
+            <g transform="translate(148, 118) rotate(-27)">
+              <rect width="56" height="38" rx="2" fill="#1a4a8a" stroke="#0d3060" stroke-width="1"/>
+              <line x1="0" y1="12.6" x2="56" y2="12.6" stroke="#2563a8" stroke-width="0.8"/>
+              <line x1="0" y1="25.2" x2="56" y2="25.2" stroke="#2563a8" stroke-width="0.8"/>
+              <line x1="18.6" y1="0" x2="18.6" y2="38" stroke="#2563a8" stroke-width="0.8"/>
+              <line x1="37.3" y1="0" x2="37.3" y2="38" stroke="#2563a8" stroke-width="0.8"/>
+            </g>
+            <g transform="translate(202, 104) rotate(-27)">
+              <rect width="56" height="38" rx="2" fill="#1a4a8a" stroke="#0d3060" stroke-width="1"/>
+              <line x1="0" y1="12.6" x2="56" y2="12.6" stroke="#2563a8" stroke-width="0.8"/>
+              <line x1="0" y1="25.2" x2="56" y2="25.2" stroke="#2563a8" stroke-width="0.8"/>
+              <line x1="18.6" y1="0" x2="18.6" y2="38" stroke="#2563a8" stroke-width="0.8"/>
+              <line x1="37.3" y1="0" x2="37.3" y2="38" stroke="#2563a8" stroke-width="0.8"/>
+            </g>
+
+            <!-- Wire from panels to inverter -->
+            <path d="M 220 158 L 220 195 L 310 195 L 310 215" stroke="#f5c518" stroke-width="2.5" stroke-dasharray="6 3" fill="none"/>
+
+            <!-- Inverter box -->
+            <rect x="285" y="215" width="50" height="40" rx="6" fill="#0d6e3f" stroke="#064028" stroke-width="1.5"/>
+            <rect x="292" y="222" width="16" height="10" rx="2" fill="#25D366" opacity="0.7"/>
+            <text x="310" y="240" font-size="7" fill="white" text-anchor="middle" font-family="sans-serif">INV</text>
+            <!-- Label -->
+            <text x="370" y="230" font-size="9" fill="#0d6e3f" font-family="sans-serif" font-weight="600">Inverter</text>
+
+            <!-- Wire from inverter to battery -->
+            <path d="M 310 255 L 310 270 L 285 270" stroke="#3b82f6" stroke-width="2.5" stroke-dasharray="6 3" fill="none"/>
+
+            <!-- Battery box -->
+            <rect x="240" y="255" width="45" height="30" rx="6" fill="#1d4ed8" stroke="#1e40af" stroke-width="1.5"/>
+            <rect x="285" y="264" width="6" height="12" rx="2" fill="#1d4ed8" stroke="#1e40af" stroke-width="1"/>
+            <text x="262" y="274" font-size="7" fill="white" text-anchor="middle" font-family="sans-serif">BATT</text>
+            <text x="200" y="276" font-size="9" fill="#1d4ed8" font-family="sans-serif" font-weight="600">Battery</text>
+
+            <!-- Wire to appliances -->
+            <path d="M 285 195 L 160 195 L 160 210" stroke="#f5c518" stroke-width="2" stroke-dasharray="5 3" fill="none"/>
+
+            <!-- Appliances -->
+            <!-- Lamp -->
+            <ellipse cx="135" cy="230" rx="12" ry="6" fill="#FFD700" opacity="0.6"/>
+            <rect x="132" y="236" width="6" height="14" rx="2" fill="#888"/>
+            <rect x="128" y="248" width="14" height="3" rx="1" fill="#666"/>
+
+            <!-- TV -->
+            <rect x="160" y="225" width="30" height="20" rx="3" fill="#333"/>
+            <rect x="162" y="227" width="26" height="14" rx="2" fill="#60a5fa" opacity="0.7"/>
+            <rect x="172" y="245" width="8" height="4" rx="1" fill="#555"/>
+
+            <!-- Fan -->
+            <circle cx="120" cy="215" r="8" fill="none" stroke="#0d6e3f" stroke-width="1.5"/>
+            <line x1="120" y1="207" x2="120" y2="213" stroke="#0d6e3f" stroke-width="1.5"/>
+            <line x1="120" y1="217" x2="120" y2="223" stroke="#0d6e3f" stroke-width="1.5"/>
+            <line x1="112" y1="215" x2="118" y2="215" stroke="#0d6e3f" stroke-width="1.5"/>
+            <line x1="122" y1="215" x2="128" y2="215" stroke="#0d6e3f" stroke-width="1.5"/>
+
+            <!-- Grid connection (power pole) -->
+            <line x1="390" y1="30" x2="390" y2="200" stroke="#888" stroke-width="3"/>
+            <line x1="375" y1="60" x2="405" y2="60" stroke="#888" stroke-width="2"/>
+            <line x1="375" y1="80" x2="405" y2="80" stroke="#888" stroke-width="2"/>
+            <circle cx="375" cy="60" r="3" fill="#555"/>
+            <circle cx="405" cy="60" r="3" fill="#555"/>
+            <!-- Wire from grid to inverter -->
+            <path d="M 390 160 L 340 160 L 340 215 L 335 215" stroke="#888" stroke-width="1.5" stroke-dasharray="4 3" fill="none"/>
+
+            <!-- Labels -->
+            <text x="118" y="90" font-size="10" fill="#0d6e3f" font-family="sans-serif" font-weight="700">Solar Panels</text>
+            <text x="360" y="55" font-size="9" fill="#666" font-family="sans-serif">Grid</text>
+          </svg>
+        </div>
+        <div class="diagram-labels">
+          <div class="diag-label">
+            <div class="diag-num">1</div>
+            <div>
+              <h5>Solar Panels</h5>
+              <p>Mounted on your roof, panels capture sunlight and produce DC electricity throughout the day.</p>
+            </div>
+          </div>
+          <div class="diag-label">
+            <div class="diag-num">2</div>
+            <div>
+              <h5>Inverter</h5>
+              <p>Converts DC power from panels into AC electricity your home appliances can use. Also draws from the grid as backup.</p>
+            </div>
+          </div>
+          <div class="diag-label">
+            <div class="diag-num">3</div>
+            <div>
+              <h5>Battery Storage</h5>
+              <p>Stores excess solar energy so your home stays powered at night or during NEPA outages.</p>
+            </div>
+          </div>
+          <div class="diag-label">
+            <div class="diag-num">4</div>
+            <div>
+              <h5>Your Appliances</h5>
+              <p>Clean electricity powers your lights, fans, TV, fridge, and more — day and night.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="services section" id="services">
+  <div class="services-header">
+    <div class="section-tag">What We Do</div>
+    <div class="section-title" style="color:white;">Our Core Services</div>
+    <p class="section-sub">From design to installation and after-sales support — we cover every aspect of your energy needs.</p>
+  </div>
+  <div class="services-grid">
+    <div class="svc-card">
+      <span class="svc-emoji">☀️</span>
+      <h3>Solar Panel Installation</h3>
+      <p>Professional rooftop solar panel design and installation for homes and businesses. Sized exactly to your energy consumption.</p>
+      <span class="svc-tag">Residential & Commercial</span>
+    </div>
+    <div class="svc-card">
+      <span class="svc-emoji">🔋</span>
+      <h3>Inverter Systems</h3>
+      <p>Supply and installation of reliable inverter systems that keep you powered round the clock — even when NEPA fails.</p>
+      <span class="svc-tag">Always-On Power</span>
+    </div>
+    <div class="svc-card">
+      <span class="svc-emoji">⚡</span>
+      <h3>Hybrid Energy Systems</h3>
+      <p>Smart systems combining solar, battery, and grid — giving you maximum efficiency and zero downtime.</p>
+      <span class="svc-tag">Solar + Grid + Battery</span>
+    </div>
+    <div class="svc-card">
+      <span class="svc-emoji">🔌</span>
+      <h3>Electrical Contracting</h3>
+      <p>Full electrical wiring, repairs and installations governed by engineering rules and regulations. Done right, the first time.</p>
+      <span class="svc-tag">All Electrical Works</span>
+    </div>
+    <div class="svc-card">
+      <span class="svc-emoji">🛠️</span>
+      <h3>Maintenance & Repair</h3>
+      <p>Swift response to any power system issue. We contain problems fast so your downtime stays at zero.</p>
+      <span class="svc-tag">Fast Response</span>
+    </div>
+    <div class="svc-card">
+      <span class="svc-emoji">🛒</span>
+      <h3>Equipment Supply</h3>
+      <p>Quality solar panels, batteries, inverters, and electrical materials supplied at competitive market prices.</p>
+      <span class="svc-tag">Top Brands</span>
+    </div>
+  </div>
+</section>
+
+<!-- WHAT WE CAN POWER -->
+<section class="power section">
+  <div class="power-header">
+    <div class="section-tag">Load Guide</div>
+    <div class="section-title">What Can Solar Power?</div>
+    <p class="section-sub">A properly sized solar system can run everything in your home or business. Here's how we categorize appliance loads to help you plan.</p>
+  </div>
+  <div class="appliance-grid">
+    <div class="appliance-group heavy">
+      <div class="appliance-group-header">
+        <span class="group-icon">🔴</span>
+        <div>
+          <div class="group-title">Heavy Load Appliances</div>
+          <div class="group-sub">High wattage — needs larger system</div>
+        </div>
+      </div>
+      <div class="appliance-list">
+        <div class="appliance-item"><span>❄️</span> Air Conditioner (1-2HP)</div>
+        <div class="appliance-item"><span>🌊</span> Water Pump (1HP+)</div>
+        <div class="appliance-item"><span>🍳</span> Electric Cooker</div>
+        <div class="appliance-item"><span>🔧</span> Industrial Machines</div>
+        <div class="appliance-item"><span>🌡️</span> Water Heater</div>
+      </div>
+    </div>
+    <div class="appliance-group medium">
+      <div class="appliance-group-header">
+        <span class="group-icon">🟡</span>
+        <div>
+          <div class="group-title">Medium Load Appliances</div>
+          <div class="group-sub">Moderate wattage — standard system</div>
+        </div>
+      </div>
+      <div class="appliance-list">
+        <div class="appliance-item"><span>🧊</span> Refrigerator / Freezer</div>
+        <div class="appliance-item"><span>📺</span> Television (32–55")</div>
+        <div class="appliance-item"><span>🌀</span> Ceiling Fan</div>
+        <div class="appliance-item"><span>💻</span> Desktop Computer</div>
+        <div class="appliance-item"><span>🫙</span> Food Processor / Blender</div>
+      </div>
+    </div>
+    <div class="appliance-group light">
+      <div class="appliance-group-header">
+        <span class="group-icon">🟢</span>
+        <div>
+          <div class="group-title">Light Load Appliances</div>
+          <div class="group-sub">Low wattage — any system handles these</div>
+        </div>
+      </div>
+      <div class="appliance-list">
+        <div class="appliance-item"><span>💡</span> LED Lights & Bulbs</div>
+        <div class="appliance-item"><span>📱</span> Phone & Laptop Charging</div>
+        <div class="appliance-item"><span>📡</span> WiFi Router / Decoder</div>
+        <div class="appliance-item"><span>🔦</span> Security Lights</div>
+        <div class="appliance-item"><span>🖨️</span> Printer / Scanner</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- INSTALLATION PROCESS -->
+<section class="install section" id="install">
+  <div class="install-header">
+    <div class="section-tag">Our Process</div>
+    <div class="section-title">How We Install Your System</div>
+    <p class="section-sub">From your first call to the moment you flip the switch — here's exactly what to expect when you work with Femelect.</p>
+  </div>
+  <div class="install-steps">
+    <div class="install-step">
+      <div class="step-num-big">01</div>
+      <div class="step-content">
+        <h3>Free Consultation & Site Assessment</h3>
+        <p>We visit your home or business, assess your energy needs, measure your roof, and calculate the right system size for your budget. No guesswork — all engineering-backed.</p>
+      </div>
+      <div class="step-visual-placeholder sv1">
+        <span>📋</span>
+        <span class="sv-label">Assessment & Planning</span>
+      </div>
+    </div>
+    <div class="install-step">
+      <div class="step-num-big">02</div>
+      <div class="step-content">
+        <h3>Solar Panel Mounting</h3>
+        <p>Our trained engineers mount your solar panels securely on your roof using industry-standard brackets — angled perfectly to maximize sunlight capture throughout the day.</p>
+      </div>
+      <div class="step-visual-placeholder sv2">
+        <span>🔲</span>
+        <span class="sv-label">Panel Mounting</span>
+      </div>
+    </div>
+    <div class="install-step">
+      <div class="step-num-big">03</div>
+      <div class="step-content">
+        <h3>Inverter & Battery Setup</h3>
+        <p>We install and wire your inverter and battery storage unit — connecting everything to your home's distribution board so the switch-over between solar, battery, and grid is fully automatic.</p>
+      </div>
+      <div class="step-visual-placeholder sv3">
+        <span>⚡</span>
+        <span class="sv-label">Inverter & Battery</span>
+      </div>
+    </div>
+    <div class="install-step">
+      <div class="step-num-big">04</div>
+      <div class="step-content">
+        <h3>Testing, Handover & Support</h3>
+        <p>We test every component, walk you through how your system works, and leave you with full after-sales support. If anything ever needs attention, we respond with speed.</p>
+      </div>
+      <div class="step-visual-placeholder sv1">
+        <span>✅</span>
+        <span class="sv-label">Testing & Handover</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY FEMELECT -->
+<section class="why section">
+  <div class="why-inner">
+    <div class="why-visual">
+      <div class="why-visual-quote">We leave every client with a <em>smile.</em></div>
+      <div class="why-visual-sub">Femelect Solution is committed to quality control at every step — from design to delivery. We don't cut corners, and we don't overcharge.</div>
+    </div>
+    <div>
+      <div class="section-tag">Why Choose Us</div>
+      <div class="section-title">The Femelect Difference</div>
+      <p class="section-sub" style="margin-bottom:36px;">We're not just installers — we're engineers who take pride in every project.</p>
+      <div class="why-points">
+        <div class="why-point">
+          <div class="why-point-icon">💰</div>
+          <div>
+            <h4>Very Competitive Pricing</h4>
+            <p>We can always renegotiate and redesign to fit your budget — without sacrificing quality or engineering standards.</p>
+          </div>
+        </div>
+        <div class="why-point">
+          <div class="why-point-icon">🚀</div>
+          <div>
+            <h4>Fast Response Time</h4>
+            <p>When issues arise, we respond with speed. We contain problems quickly so your project and power supply keep moving.</p>
+          </div>
+        </div>
+        <div class="why-point">
+          <div class="why-point-icon">📐</div>
+          <div>
+            <h4>Engineering-Based Design</h4>
+            <p>Every installation is calculated and governed by engineering rules. We design what's right for your load — not what's easiest for us.</p>
+          </div>
+        </div>
+        <div class="why-point">
+          <div class="why-point-icon">🛡️</div>
+          <div>
+            <h4>Quality Control on Every Job</h4>
+            <p>We inspect every installation before handover. Our reputation is built on work that lasts.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about section" id="about">
+  <div class="about-inner">
+    <div class="about-text">
+      <div class="section-tag">About Femelect</div>
+      <div class="section-title">Who We Are</div>
+      <p>Femelect Solution (Femelect Integrated Services) is an alternative energy contracting and service company committed to serving clients with the best qualitative and professional services through well-trained, dedicated staff.</p>
+      <p>Our designs and installations are carefully calculated based on engineering rules and regulations — and we are always ready to solve any kind of electrical challenge you may have.</p>
+      <div class="values-wrap">
+        <div class="val-chip"><div class="val-chip-dot"></div><span>Integrity</span></div>
+        <div class="val-chip"><div class="val-chip-dot"></div><span>Excellence</span></div>
+        <div class="val-chip"><div class="val-chip-dot"></div><span>Customer First</span></div>
+        <div class="val-chip"><div class="val-chip-dot"></div><span>Community</span></div>
+        <div class="val-chip"><div class="val-chip-dot"></div><span>Learning</span></div>
+        <div class="val-chip"><div class="val-chip-dot"></div><span>People</span></div>
+      </div>
+    </div>
+    <div class="about-visual-grid">
+      <div class="about-img-card ai1"><span style="font-size:3.5rem;">☀️</span></div>
+      <div class="about-img-card ai2" style="display:flex;align-items:center;justify-content:center;font-size:4rem;">⚡</div>
+      <div class="about-img-card ai3"><span style="font-size:3.5rem;">🔋</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <div class="contact-inner" style="max-width:900px; margin:0 auto;">
+    <div class="contact-left">
+      <div class="section-tag">Contact Us</div>
+      <div class="section-title">Ready to Go Solar?</div>
+      <p>Reach out today for a free consultation and system sizing. We'll design the right solution for your energy needs and budget — no pressure, no hidden costs.</p>
+    </div>
+    <div class="contact-card-list">
+      <a href="tel:08062720312" class="c-card">
+        <div class="c-card-icon">📞</div>
+        <div>
+          <div class="c-card-label">Call Us</div>
+          <div class="c-card-val">08062720312</div>
+        </div>
+      </a>
+      <a href="tel:07035173572" class="c-card">
+        <div class="c-card-icon">📞</div>
+        <div>
+          <div class="c-card-label">Call Us (Line 2)</div>
+          <div class="c-card-val">07035173572</div>
+        </div>
+      </a>
+      <a href="https://wa.me/2348062720312" class="c-card" target="_blank">
+        <div class="c-card-icon">💬</div>
+        <div>
+          <div class="c-card-label">WhatsApp</div>
+          <div class="c-card-val">08062720312</div>
+        </div>
+      </a>
+      <div class="c-card">
+        <div class="c-card-icon">📍</div>
+        <div>
+          <div class="c-card-label">Service Area</div>
+          <div class="c-card-val">Nigeria</div>
+        </div>
+      </div>
+      <a href="https://wa.me/2348062720312" class="whatsapp-cta" target="_blank">
+        💬 Chat on WhatsApp Now
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo">FEM<span>ELECT</span> SOLUTION</div>
+  <p>© 2025 Femelect Solution · Excellent Solution Provider</p>
+</footer>
+
+</body>
+</html>
